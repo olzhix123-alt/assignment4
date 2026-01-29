@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS categories (
 
 CREATE TABLE IF NOT EXISTS menu_items (
     id SERIAL PRIMARY KEY,
-    category_id INT REFERENCES categories(id), -- Вот твоя связь (FK)
+    category_id INT REFERENCES categories(id),
     name VARCHAR(100) NOT NULL UNIQUE,
     price DOUBLE PRECISION NOT NULL,
     type VARCHAR(50),
